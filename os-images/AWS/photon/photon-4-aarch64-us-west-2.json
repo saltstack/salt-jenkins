@@ -1,0 +1,19 @@
+{
+  "_comment": "Build with `packer build -var-file=photon-4-aarch64-us-west-2.json photon.json`",
+  "ssh_username": "root",
+  "aws_region": "us-west-2",
+  "os_name": "Photon",
+  "os_version": "4",
+  "os_arch": "aarch64",
+  "salt_provision_version": "3003.1",
+  "salt_provision_root_dir": "/tmp/salt-provision",
+  "salt_provision_python_version": "3.9.1",
+  "salt_provision_pyenv_deps": "make gcc binutils binutils-libs linux-api-headers glibc-devel zlib-devel bzip2-devel readline-devel sqlite-devel openssl-devel libffi-devel",
+  "state_name": "golden-images-provision",
+  "ami_architecture": "arm64",
+  "ami_filter": "photon-ami-4.0-*",
+  "ami_owner": "073736783432",
+  "ami_name_prefix": "saltstack",
+  "ami_name_suffix": "photon/4/aarch64",
+  "instance_type": "m6g.large"
+}
