@@ -1,0 +1,37 @@
+@Library('salt@master-1.10-golden') _
+
+// Define the maximum time, in hours, that a test run should run for
+def testrun_timeout = 6
+
+def distro_name = 'debian'
+def distro_version = '11'
+def distro_arch = 'arm64'
+def nox_env_name = 'pytest-zeromq'
+def nox_passthrough_opts = '--ssh-tests'
+def concurrent_builds = 1
+def use_spot_instances = true
+def jenkins_slave_label = 'packer'
+def supports_py2 = false
+def supports_py3 = true
+
+properties([
+    buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '10')),
+])
+
+buildGoldenImage(
+    env: env,
+    distro_name: distro_name,
+    distro_version: distro_version,
+    distro_arch: distro_arch,
+    nox_env_name: nox_env_name,
+    nox_passthrough_opts: nox_passthrough_opts,
+    testrun_timeout: testrun_timeout,
+    force_run_full: true,
+    use_spot_instances: false,
+    jenkins_slave_label: jenkins_slave_label,
+    concurrent_builds: concurrent_builds,
+    ec2_region: 'us-west-2',
+    supports_py2: supports_py2,
+    supports_py3: supports_py3)
+
+// vi: ft=groovy
