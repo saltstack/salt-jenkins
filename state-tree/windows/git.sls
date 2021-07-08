@@ -9,6 +9,7 @@ git-windeps:
     - name: git
     - version: 2.22.0
     - refresh_modules: True
+    - extra_install_flags: "/GitAndUnixToolsOnPath"
     - require:
       - git-exists-in-path
   {%- else %}
