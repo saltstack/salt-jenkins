@@ -24,7 +24,7 @@ curl:
   {{ install_method }}:
     - name: {{ curl }}
     {%- if install_method == 'pkg.installed' %}
-    - aggregate: True
+    - aggregate: False
     {%- endif %}
     {%- if grains['os_family'] == 'RedHat' or grains['os'] == 'openSUSE' %}
     - require:
@@ -39,7 +39,7 @@ curl:
 {%- if grains['os_family'] == 'RedHat' and grains['osmajorrelease']|int == 5 %}
 openssl:
   pkg.latest:
-    - aggregate: True
+    - aggregate: False
 
 update-openssl:
   cmd:
@@ -50,5 +50,5 @@ update-openssl:
 {%- if grains['os'] == 'Arch' %}
 openssl:
   pkg.latest:
-    - aggregate: True
+    - aggregate: False
 {%- endif %}

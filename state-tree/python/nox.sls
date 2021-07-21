@@ -24,7 +24,7 @@
   {%- set pip = 'py -3 -m pip' %}
 {%- else %}
   {%- if on_freebsd %}
-    {%- set pip = 'pip-3.7' %}
+    {%- set pip = 'pip-3.8' %}
   {%- else %}
     {%- set pip = 'pip3' %}
   {%- endif %}

@@ -8,4 +8,4 @@
 
 {{ libxml2 }}:
   pkg.installed:
-    - aggregate: True
+    - aggregate: False

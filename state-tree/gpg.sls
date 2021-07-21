@@ -7,4 +7,4 @@
 gpg:
   pkg.installed:
     - name: {{ gnupg }}
-    - aggregate: True
+    - aggregate: False

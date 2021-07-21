@@ -20,7 +20,7 @@
 {%- elif os_family == 'Arch' %}
   {%- set pip_pkg_name = 'python-pip' %}
 {%- elif os_family == 'FreeBSD' %}
-  {%- set pip_pkg_name = 'py37-pip' %}
+  {%- set pip_pkg_name = 'py38-pip' %}
 {%- else %}
   {%- set pip_pkg_name = 'python3-pip' %}
 {%- endif %}

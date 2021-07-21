@@ -8,7 +8,7 @@
   "salt_provision_version": "3001.1",
   "salt_provision_root_dir": "/tmp/salt-provision",
   "salt_provision_python_version": "3.6.10",
-  "salt_provision_pyenv_deps": "gcc automake bzip2 libbz2-devel xz xz-devel openssl-devel ncurses-devel readline-devel zlib-devel tk-devel libffi-devel sqlite3-devel tar make",
+  "salt_provision_pyenv_deps": "gcc automake bzip2 libbz2-devel xz xz-devel libopenssl-devel ncurses-devel readline-devel zlib-devel tk-devel libffi-devel sqlite3-devel tar make",
   "state_name": "golden-images-provision",
   "ami_filter": "openSUSE-Leap-15-?-v????????-hvm-ssd-x86_64-*",
   "ami_owner": "679593333241",

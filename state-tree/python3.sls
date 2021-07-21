@@ -97,7 +97,7 @@ python3:
   pkg.installed:
     - name: {{ python3 }}
     {%- if grains['os'] != 'Windows' %}
-    - aggregate: True
+    - aggregate: False
     {%- else %}
     - aggregate: False
     - version: '3.8.8150.0'

@@ -8,4 +8,4 @@
 
 {{ libgit2 }}:
   pkg.installed:
-    - aggregate: True
+    - aggregate: False

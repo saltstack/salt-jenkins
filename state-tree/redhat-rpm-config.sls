@@ -1,3 +1,3 @@
 redhat-rpm-config:
   pkg.installed:
-    - aggregate: True
+    - aggregate: False

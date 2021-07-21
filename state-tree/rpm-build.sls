@@ -1,3 +1,3 @@
 rpm-build:
   pkg.installed:
-    - aggregate: True
+    - aggregate: False

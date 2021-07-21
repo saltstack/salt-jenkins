@@ -27,8 +27,7 @@ include:
     {%- endif %}
   {%- endif %}
   # All VMs get docker-py so they can run unit tests
-  {%- if grains['os'] in ('AlmaLinux', 'CentOS', 'CentOS Stream') and os_major_release == 7 or grains['os'] == 'Ubuntu' and os_major_release == 16 %}
-  # Docker integration tests only on CentOS 7 (for now)
+  {%- if (grains['os'] in ('AlmaLinux', 'CentOS', 'CentOS Stream') and os_major_release >= 7) or (grains['os_family'] == 'Debian' or grains['os'] in ('Amazon', 'Arch', 'Fedora', 'SUSE', 'VMware Photon OS')) %}
   - docker
   - vault
   {%- endif %}

@@ -73,7 +73,7 @@ python2:
     {%- endif %}
     - name: {{ python2 }}
     {%- if grains['os'] != 'Windows' %}
-    - aggregate: True
+    - aggregate: False
     {%- else %}
     - aggregate: False
     - version: '2.7.15150'

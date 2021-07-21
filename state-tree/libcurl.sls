@@ -7,7 +7,7 @@
 {%- if grains['os_family'] not in ('Arch',) %}
 libcurl_and_pycurl_deps:
   pkg.latest:
-    - aggregate: True
+    - aggregate: False
     - pkgs:
   {%- for pkg in libcurl_pkg %}
       - {{ pkg }}

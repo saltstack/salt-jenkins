@@ -1,3 +1,3 @@
 python-xml:
   pkg.installed:
-    - aggregate: True
+    - aggregate: False

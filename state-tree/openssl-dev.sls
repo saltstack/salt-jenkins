@@ -9,4 +9,4 @@
 openssl-dev-libs:
   pkg.installed:
     - name: {{ openssl_dev }}
-    - aggregate: True
+    - aggregate: False

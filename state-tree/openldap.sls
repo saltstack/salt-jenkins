@@ -17,5 +17,5 @@ openldap:
     {%- elif grains['os_family'] == 'Arch' %}
       - openldap
     {%- endif %}
-    - aggregate: True
+    - aggregate: False
 {%- endif %}

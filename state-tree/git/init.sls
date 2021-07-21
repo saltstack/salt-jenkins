@@ -31,13 +31,13 @@ include:
 libgit2:
   pkg.installed:
     - name: libgit2
-    - aggregate: True
+    - aggregate: False
   {%- endif %}
 
 git:
   pkg.installed:
     - name: {{ git }}
-    - aggregate: True
+    - aggregate: False
     - refresh: True  # Ensure that pacman runs the first time with -Syu
     {%- if grains['os_family'] == 'RedHat' %}
     - require:

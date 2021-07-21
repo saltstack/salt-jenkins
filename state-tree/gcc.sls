@@ -20,5 +20,5 @@ gcc:
     - name: {{ gcc }}
 {# workaround on macosx - issue when install node and gcc together #}
 {%- if grains['os_family'] in ('MacOS',) %}
-    - aggregate: True
+    - aggregate: False
 {%- endif %}

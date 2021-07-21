@@ -7,4 +7,4 @@
 sed:
   pkg.installed:
     - name: {{ sed }}
-    - aggregate: True
+    - aggregate: False

@@ -1,6 +1,6 @@
 
 swig:
   pkg.installed:
-    - aggregate: True
+    - aggregate: False
     - pkgs:
       - swig

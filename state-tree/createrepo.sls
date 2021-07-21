@@ -9,4 +9,4 @@
 createrepo:
   pkg.installed:
     - name: {{ createrepo }}
-    - aggregate: True
+    - aggregate: False

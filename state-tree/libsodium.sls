@@ -34,7 +34,7 @@ include:
 libsodium:
   pkg.installed:
     - name: {{ libsodium }}
-    - aggregate: True
+    - aggregate: False
 
 {%- else %}
 

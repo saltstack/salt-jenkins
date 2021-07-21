@@ -7,4 +7,4 @@
 patch:
   pkg.installed:
     - name: {{ patch }}
-    - aggregate: True
+    - aggregate: False

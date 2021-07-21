@@ -1,3 +1,3 @@
 rsync:
   pkg.installed:
-    - aggregate: True
+    - aggregate: False

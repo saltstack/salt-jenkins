@@ -5,13 +5,13 @@
 python2-apt:
   pkg.installed:
     - name: {{ python2_apt }}
-    - aggregate: True
+    - aggregate: False
 {%- endif %}
 
 python3-apt:
   pkg.installed:
     - name: {{ python3_apt }}
-    - aggregate: True
+    - aggregate: False
 
 python-apt:
   test.succeed_without_changes:
