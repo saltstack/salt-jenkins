@@ -1,0 +1,19 @@
+{
+  "_comment": "Build with `packer build -var-file=debian-11-arm64-us-west-2.json debian.json`",
+  "ssh_username": "admin",
+  "aws_region": "us-west-2",
+  "device_name": "/dev/xvda",
+  "os_name": "Debian",
+  "os_version": "11",
+  "os_arch": "arm64",
+  "salt_provision_version": "3003",
+  "salt_provision_root_dir": "/tmp/salt-provision",
+  "salt_provision_python_version": "3.9.5",
+  "salt_provision_pyenv_deps": "make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev",
+  "state_name": "golden-images-provision",
+  "ami_filter": "debian-11-arm64*",
+  "ami_owner": "903794441882",
+  "ami_name_prefix": "saltstack",
+  "ami_name_suffix": "debian/11/arm64",
+  "instance_type": "m6g.large"
+}
