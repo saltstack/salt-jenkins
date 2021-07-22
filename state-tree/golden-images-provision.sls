@@ -4,6 +4,9 @@
 
 include:
   - path
+  {%- if grains['os'] == 'FreeBSD' %}
+  - sysctl
+  {%- endif %}
   {%- if grains['os_family'] == 'Debian' %}
   - apt
   {%- endif %}
