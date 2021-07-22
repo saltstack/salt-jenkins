@@ -16,6 +16,7 @@ include:
   - vim
   {%- endif %}
   {%- if grains.get('kernel') == 'Linux' %}
+  - gitlab
   - man
   - libcurl
   - ulimits
