@@ -79,8 +79,9 @@
         "find /etc/yum.repos.d -type f -exec sed -i 's!dl.bintray.com/vmware!packages.vmware.com/photon/$releasever!' {} ';'",
         "tdnf install -y linux",
         "tdnf remove -y linux-aws",
+        "tdnf install -y fipsify linux-hmacgen",
         "tdnf update -y",
-        "if ! grep -q fips=1 /boot/photon.cfg; then sed -i 's/^photon_cmdline=.*/& fips=1/' /boot/photon.cfg; fi",
+        "if ! grep -q fips=1 /boot/systemd.cfg; then sed -i 's/^systemd_cmdline=.*/& fips=1/' /boot/systemd.cfg; fi",
         "if ! grep -q 'FipsMode yes' /etc/ssh/sshd_config; then echo 'FipsMode yes' >> /etc/ssh/sshd_config; fi",
         "reboot"
       ],

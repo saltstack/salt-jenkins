@@ -1,0 +1,13 @@
+{
+  "_comment": "Build with `packer build -var-file=photon-4-vars.json photon.json`",
+  "docker_image": "photon:4.0",
+  "docker_repository": "saltstack",
+  "os_name": "PhotonOS",
+  "os_version": "4",
+  "run_command": "/usr/lib/systemd/systemd",
+  "salt_provision_version": "3003.1",
+  "salt_provision_root_dir": "/tmp/salt-provision",
+  "salt_provision_python_version": "3.9.1",
+  "salt_provision_pyenv_deps": "make gcc gawk grep binutils binutils-libs coreutils linux-api-headers glibc-devel zlib-devel bzip2-devel readline-devel sqlite-devel openssl-devel libffi-devel",
+  "state_name": "golden-images-provision"
+}
